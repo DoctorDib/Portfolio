@@ -11,9 +11,6 @@ const flash = require('connect-flash');
 
 const dependencies = require('./dependencies');
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-
 const ejs = require('ejs');
 
 
@@ -32,16 +29,16 @@ dependencies.resolve(function(home){
 
         // Setup Router/Routing
         const router = require('express-promise-router')();
+
         // grabbing main template
         // Grabbing content
-
         home.setRouting(router);
 
         app.use(router);
     }
 
     function configureExpress(app){
-        app.use(express.static('/client/public'));
+        app.use(express.static('client/public'));
         app.use(cookieParser());
 
         app.set('views', __dirname + '/client/public');

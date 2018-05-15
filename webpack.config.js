@@ -1,7 +1,7 @@
 const path = require('path'); const HtmlWebpackPlugin = require('html-webpack-plugin'); const BUILD_DIR = path.resolve(__dirname, 'client/public'); 
 const APP_DIR = path.resolve(__dirname, 'client/src'); const config = {
     entry: {
-        'index': path.join(APP_DIR, 'index.jsx'),
+        'index': path.join(APP_DIR, 'template.jsx'),
     },
     mode: 'development',
     output: {
