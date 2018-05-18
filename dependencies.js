@@ -13,7 +13,6 @@ modules.forEach(function(val){
 });
 
 container.load(path.join(__dirname, '/routers'));
-container.load(path.join(__dirname, '/helpers'));
 
 container.register('container', function(){
     return container;
