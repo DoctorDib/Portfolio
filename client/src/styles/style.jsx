@@ -66,7 +66,8 @@ const styles = theme => ({
         transition: 'opacity 0.5s ease-out',
         animation: 'moveSlideshow 60s linear infinite',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        zIndex: '10'
     },
 
     sliderContent: {
@@ -85,6 +86,27 @@ const styles = theme => ({
         bottom: '0',
         color: 'black',
         fontSize: '3em'
+    },
+    
+    sideBar: {
+        position: 'fixed',
+        width: '75px',
+        height: '100%',
+        right: '0',
+        top: '10',
+        backgroundColor: 'inherit',
+        padding: '0.5em'
+    },
+    
+    page: {
+        color: 'black',
+        borderBottom: 'solid black 0.1em',
+        marginLeft: '8em',
+        marginRight: '8em',
+        padding: '2em',
+        width: '80%',
+        backgroundColor: '#eeeeee',
+        boxShadow: '0px 0px 6px 1px #b9b9b9'
     }
 
 });

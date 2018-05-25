@@ -1,56 +1,64 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Template from '../mainTemplate';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import PropTypes from 'prop-types';
 
-class Home extends React.Component {
+import theme from '../../styles/withRoot';
+import styles from '../../styles/contentStyle';
+
+import { withStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+
+
+class Template extends React.Component {
     render() {
+        const { classes } = this.props;
+        
         return (
-            <div style={{color:'black'}}>
-                <h1> This should be my test content </h1>
-                <h1> This should be my test content </h1>
-                <h1> This should be my test content </h1>
-                <h1> This should be my test content </h1>
-                <h1> This should be my test content </h1>
-                <p> Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ...... Maybe I should just ......Maybe I should just ......
-                </p>
-                <h1> This should be my test content </h1>
-                <p> Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ...... Maybe I should just ......Maybe I should just ......
-                </p>
-                <h1> This should be my test content </h1>
-                <p> Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ...... Maybe I should just ......Maybe I should just ......
-                </p>
-                <h1> This should be my test content </h1>
-                <p> Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ......
-                    Maybe I should just ...... Maybe I should just ...... Maybe I should just ...... Maybe I should just ......Maybe I should just ......
-                </p>
-            </div>
+        <div>
+            <Avatar aria-label="Picture of me" className={classes.aboutMeAvatar} src={require('../../img/me.jpg')} />
+            <h1 className={classes.center}> About me </h1>
+            
+            <Card className={classes.card}>
+                <CardContent>
+                    <Typography variant="headline" component="h2">
+                        Contact Information:
+                    </Typography>
+                    
+                    <Typography className={classes.pos} color="textSecondary">
+                        LinkedIn:
+                    </Typography>
+                    <Typography component="p">
+                        <a href="https://www.linkedin.com/in/jamesdibnah/"> https://www.linkedin.com/in/jamesdibnah/ </a>
+                    </Typography>
+    
+                    <Typography className={classes.pos} color="textSecondary">
+                        Email:
+                    </Typography>
+                    <Typography component="p">
+                        jamesdibnah@gmail.com
+                    </Typography>
+    
+                    <Typography className={classes.pos} color="textSecondary">
+                        CV:
+                    </Typography>
+                    <Typography component="p">
+                        Please contact me for my CV
+                    </Typography>
+                    
+                </CardContent>
+            </Card>
+        </div>
         );
     }
 }
 
-ReactDOM.render(<Template content={<Home />}/>, document.getElementById('importContent'));
+Template.propTypes = {
+    classes: PropTypes.object.isRequired
+};
+
+export default theme(withStyles(styles)(Template));
