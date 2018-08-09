@@ -9,6 +9,9 @@ const validator = require('express-validator');
 const session = require('express-session');
 const flash = require('connect-flash');
 
+const path = require('path');
+const favicon = require('serve-favicon');
+
 const dependencies = require('./dependencies');
 
 const ejs = require('ejs');
@@ -21,8 +24,8 @@ dependencies.resolve(function(home){
         const app = express();
         const server = http.createServer(app);
 
-        server.listen(80, function(){
-            console.log('Listening on port 80');
+        server.listen(8080, function(){
+            console.log('Listening on port 8080');
         });
 
         configureExpress(app);
@@ -38,12 +41,13 @@ dependencies.resolve(function(home){
     }
 
     function configureExpress(app){
+
         app.use(express.static('client/public'));
+        app.use(favicon(path.join(__dirname, '/client/src/img', 'icon.png')));
         app.use(cookieParser());
 
         app.set('views', __dirname + '/client/public');
         app.set('view engine', 'ejs');
-
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({extended: true}));
         app.use(validator());
