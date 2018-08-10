@@ -7,11 +7,28 @@ const styles = theme => ({
         flexDirection: 'column'
     },
 
+    projectList: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+
     project: {
         display: 'flex',
         flexDirection: 'column',
         margin: '2em',
         width: '80%',
+        backgroundColor: 'white',
+        padding: '1em',
+        flex: '1',
+        maxWidth: '75vw'
+    },
+
+    projectName: {
+        fontSize: '2em',
+        color: '#898989',
+        margin: '0',
         marginLeft: 'auto',
         marginRight: 'auto'
     },
@@ -109,6 +126,15 @@ const styles = theme => ({
         width: '50%',
         marginLeft: 'auto',
         marginRight: 'auto'
+    },
+
+    homeCard: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: '75vw',
+        display: 'flex',
+        justifyContent: 'center',
+        textAlign: 'center'
     },
 
     title: {
