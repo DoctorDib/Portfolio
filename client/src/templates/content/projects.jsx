@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import theme from '../../styles/withRoot';
 import styles from '../../styles/contentStyle';
-
+import HASImg from '../../img/HAS.png';
 
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -24,79 +24,84 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-
+const posts = [
+    {
+        id: 1,
+        title: 'FORCED',
+        languages: {
+            cSharp: 100
+        },
+        contentImg: 'https://img.itch.zone/aW1hZ2UvMjc0ODgzLzEzMzE0NTkucG5n/original/83Z9Lt.png',
+        content: 'Me and a friend made a game! Wooohoooo',
+        github: 'https://github.com/MidgetJake/GDQ-One-Mechanic-Jam',
+        itchIO: 'https://valesoft.itch.io/forced'
+    },
+    {
+        id: 2,
+        title: 'HASv2',
+        languages: {
+            python: 75.1,
+            html: 13.9,
+            javaScript: 6.9,
+            css: 4.1
+        },
+        contentImg: HASImg,
+        content: 'Me and a friend made a game! Wooohoooo',
+        github: 'https://github.com/DoctorDib/HASv2'
+    }
+];
 
 class ProjectsCard extends React.Component {
-    state = { expanded: false };
-
-    handleExpandClick = () => {
-        this.setState({ expanded: !this.state.expanded });
-    };
 
     render() {
         const { classes } = this.props;
+        const content = posts.map((post) =>
+            <div className={classes.project}>
+                <Card className={classes.projectHeader}>
+                    <h1 className={classes.projectName}> {post.title} </h1>
+                </Card>
+                <Card>
+                    <CardContent>
+                        <section className={classes.languageContainer}>
+                            {post.languages.python ? (<div className={classes.python} style={{width: post.languages.python + "%"}}> Python: {post.languages.python}% </div>) : (<div className={classes.disabled}/>)}
+                            {post.languages.css ? (<div className={classes.css} style={{width: post.languages.css + "%"}}> CSS: {post.languages.css}% </div>) : (<div className={classes.disabled}/>)}
+                            {post.languages.html ? (<div className={classes.html} style={{width: post.languages.html + "%"}}> HTML: {post.languages.html}% </div>) : (<div className={classes.disabled}/>)}
+                            {post.languages.javaScript ? (<div className={classes.javaScript} style={{width: post.languages.javaScript + "%"}}> JavaScript: {post.languages.javaScript}% </div>) : (<div className={classes.disabled}/>)}
+                            {post.languages.java ? (<div className={classes.java} style={{width: post.languages.java + "%"}}> Java: {post.languages.java}% </div>) : (<div className={classes.disabled}/>)}
+                            {post.languages.cSharp ? (<div className={classes.cSharp} style={{width: post.languages.cSharp + "%"}}> C#: {post.languages.cSharp}% </div>) : (<div className={classes.disabled}/>)}
+                        </section>
+
+                        <section className={classes.projectContent}>
+                            {post.contentImg ? (<img className={classes.projectImg} src={post.contentImg}/>) : (<img className={classes.disabled}/>)}
+
+                            {post.content}
+                        </section>
+
+                        <section className={classes.projectLinks}>
+                            {post.github ? (<Button href={post.github} className={classes.projectButton}> GitHub </Button>) : (<Button className={classes.disabled}/>)}
+                            {post.itchIO ? (<Button href={post.itchIO} className={classes.projectButton}> Itch.IO </Button>) : (<Button className={classes.disabled}/>)}
+                            {post.otherLink ? (<Button href={post.otherLink} className={classes.projectButton}> Visit </Button>) : (<Button className={classes.disabled}/>)}
+                        </section>
+                    </CardContent>
+                </Card>
+            </div>
+        );
 
         return (
-        <div>
-            <h1 className={classes.title}> My Personal Projects </h1>
-
-            <section className={classes.projectList}>
-                <Card className={classes.project}>
-                    <CardContent>
-                        <h1 className={classes.projectName}> FYP - musicDEV </h1>
-                        <section className={classes.languageContainer}>
-                            <div className={classes.python} style={{width:'33.33%'}}>
-                                Python: 33.33%
-                            </div>
-                            <div className={classes.javaScript} style={{width:'33.33%'}}>
-                                JavaScript: 33.33%
-                            </div>
-                            <div className={classes.css} style={{width:'33.33%'}}>
-                                CSS: 33.33%
-                            </div>
-                        </section>
-                        <section className={classes.projectContainer}>
-                            <p> Content filler that should do its job if I just spam </p>
-                            <p> Content filler that should do its job if I just spam </p>
-                            <p> Content filler that should do its job if I just spam Content filler that should do its job if I
-                            just spam Content filler that should do its job if I just spam </p>
-                        </section>
-                        <section className={classes.projectLinks}>
-                            <h1> Create links when starting on my FYP </h1>
-
-                        </section>
-                    </CardContent>
-                </Card>
-
-                <Card className={classes.project}>
-                    <CardContent>
-                        <h1 className={classes.projectName}> FUN - Forced </h1>
-                        <section className={classes.languageContainer}>
-                            <div className={classes.cSharp} style={{width:'100%'}}>
-                                C#: 100%
-                            </div>
-                        </section>
-
-                        <section className={classes.projectContainer}>
-                            <p> Content filler that should do its job if I just spam </p>
-                            <p> Content filler that should do its job if I just spam </p>
-                            <p> Content filler that should do its job if I just spam Content filler that should do its job if
-                            I just spam Content filler that should do its job if I just spam </p>
-                        </section>
-                        <section className={classes.projectLinks}>
-                            <Button href={"https://github.com/MidgetJake/GDQ-One-Mechanic-Jam"}> GitHub </Button>
-                            <Button href={"https://valesoft.itch.io/forced"}> Itch.IO </Button>
-                        </section>
-                    </CardContent>
-                </Card>
-            </section>
-        </div>
+            <div>
+                <h1 className={classes.title}> My Personal Projects </h1>
+                <section className={classes.projectList}>
+                    {content}
+                </section>
+            </div>
         );
     }
 }
 
+
+
 ProjectsCard.propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ProjectsCard);

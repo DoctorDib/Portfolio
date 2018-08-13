@@ -5,7 +5,8 @@ const styles = theme => ({
         background: '#cbcbcb',
         margin: 0,
         color: '#f3f3f3',
-        fontFamily: "'Roboto', sans-serif",
+        fontFamily: '"Montserrat Light", arial',
+        fontWeight: 200,
         display: 'flex',
         flexDirection:  'column',
         alignItems: 'center'

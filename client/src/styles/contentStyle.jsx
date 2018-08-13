@@ -9,7 +9,7 @@ const styles = theme => ({
 
     projectList: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         flexDirection: 'row',
         flexWrap: 'wrap'
     },
@@ -34,16 +34,29 @@ const styles = theme => ({
     },
 
     projectHeader: {
-        backgroundColor: 'red',
-
+        marginBottom: '1em',
+        textAlign: 'center'
     },
 
-    projectSubHeader: {
-
+    projectContent: {
+        padding: '1em'
     },
 
-    projectShowMore: {
-        width: '100%'
+    projectImg: {
+        width: '100%',
+        marginBottom: '1em'
+    },
+
+    projectLinks: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column'
+    },
+
+    projectButton: {
+        width: '100%',
+        backgroundColor: '#f3f3f3',
+        margin: '0.25em'
     },
 
     languageContainer: {
@@ -141,10 +154,13 @@ const styles = theme => ({
         display: 'flex',
         textAlign: 'center',
         fontSize: '3em',
-        fontWeight: 'bold',
         flexDirection: 'column',
         color: '#2e2e35',
         marginTop: '0.2em'
+    },
+
+    disabled: {
+        display: 'none'
     }
 });
 
