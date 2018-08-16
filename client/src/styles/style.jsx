@@ -5,7 +5,7 @@ const styles = theme => ({
         background: '#cbcbcb',
         margin: 0,
         color: '#f3f3f3',
-        fontFamily: '"Montserrat Light", arial',
+        //fontFamily: '"Montserrat Light", arial',
         fontWeight: 200,
         display: 'flex',
         flexDirection:  'column',
@@ -29,7 +29,11 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         fontSize: '5em',
-        height: '2em'
+        height: '2em',
+        webkitUserSelect: 'none',
+        mozUserSelect: 'none',
+        msUserSelect: 'none',
+        userSelect: 'none'
     },
 
     nameChild: {
@@ -100,8 +104,7 @@ const styles = theme => ({
     page: {
         color: 'black',
         borderBottom: 'solid #222222 0.1em',
-        marginLeft: '8em',
-        marginRight: '8em',
+        margin: '0',
         padding: '2em',
         width: '100%',
         backgroundColor: '#eeeeee',

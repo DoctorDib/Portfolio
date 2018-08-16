@@ -14,28 +14,45 @@ const styles = theme => ({
         flexWrap: 'wrap'
     },
 
+    projectCard: {
+        padding: '0',
+        paddingBottom: '1em'
+    },
+
     project: {
         display: 'flex',
         flexDirection: 'column',
         margin: '2em',
         width: '80%',
-        backgroundColor: 'white',
-        padding: '1em',
-        flex: '1',
-        maxWidth: '75vw'
+        flex: '0 0 45%',
+        maxWidth: '75vw',
+        [theme.breakpoints.down('sm')]: {
+              flex: '0 0 100%',
+              margin: '0',
+              marginTop: '2em',
+              marginBottom: '2em'
+        },
     },
 
-    projectName: {
+    projectTitle: {
         fontSize: '2em',
         color: '#898989',
         margin: '0',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        padding: '0.1em'
+    },
+
+    projectSubtitle: {
+        backgroundColor: '#eaeaea',
+        paddingTop: '0.15em',
+        paddingBottom: '0.25em'
     },
 
     projectHeader: {
-        marginBottom: '1em',
-        textAlign: 'center'
+        marginBottom: '0.25em',
+        textAlign: 'center',
+        paddingTop: '0.25em'
     },
 
     projectContent: {
@@ -54,7 +71,9 @@ const styles = theme => ({
     },
 
     projectButton: {
-        width: '100%',
+        width: '95%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         backgroundColor: '#f3f3f3',
         margin: '0.25em'
     },
@@ -80,7 +99,6 @@ const styles = theme => ({
     python: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #4286f4'
     },
@@ -88,7 +106,6 @@ const styles = theme => ({
     css: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #ba8cff'
     },
@@ -96,7 +113,6 @@ const styles = theme => ({
     html: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #ea546d'
     },
@@ -104,7 +120,6 @@ const styles = theme => ({
     javaScript: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #fcf06c'
     },
@@ -112,7 +127,6 @@ const styles = theme => ({
     java: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #fcae51'
     },
@@ -120,7 +134,6 @@ const styles = theme => ({
     cSharp: {
         height: '0.75em',
         fontSize: '0.8em',
-        height: '100%',
         padding: '1em',
         borderBottom: 'solid 0.5em #5fa85e'
     },
@@ -138,7 +151,8 @@ const styles = theme => ({
     card: {
         width: '50%',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        marginBottom: '2em'
     },
 
     homeCard: {
@@ -156,7 +170,8 @@ const styles = theme => ({
         fontSize: '3em',
         flexDirection: 'column',
         color: '#2e2e35',
-        marginTop: '0.2em'
+        marginTop: '0.2em',
+        marginBottom: '0.5em'
     },
 
     disabled: {
