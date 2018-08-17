@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { mainTheme } from '../styles/theme.jsx';
-
-
-
-import Indexer from './index';
+import Indexer from './content/index';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 class App extends React.Component {
