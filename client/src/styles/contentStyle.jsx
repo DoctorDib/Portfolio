@@ -31,7 +31,7 @@ const styles = theme => ({
               margin: '0',
               marginTop: '2em',
               marginBottom: '2em'
-        },
+        }
     },
 
     projectTitle: {
@@ -176,6 +176,49 @@ const styles = theme => ({
 
     disabled: {
         display: 'none'
+    },
+
+    hobbyList: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+
+    hobbyCard: {
+        padding: '0',
+        paddingBottom: '1em'
+    },
+
+    hobby: {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '2em',
+        width: '80%',
+        flex: '0 0 45%',
+        maxWidth: '75vw',
+        [theme.breakpoints.down('sm')]: {
+            flex: '0 0 100%',
+            margin: '0',
+            marginTop: '2em',
+            marginBottom: '2em'
+        }
+    },
+
+    hobbyTitle: {
+        fontSize: '2em',
+        color: '#898989',
+        margin: '0',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        padding: '0.1em'
+    },
+
+    hiddenContent: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'black'
+
     }
 });
 

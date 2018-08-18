@@ -17,6 +17,7 @@ import styles from '../../styles/style';
 
 import AboutMe from './about-me';
 import Projects from './projects';
+import Hobbies from './hobbies';
 import ContactMe from './contact-me';
 
 var currentPage, initialSetUp = false;
@@ -53,16 +54,19 @@ class Template extends React.Component {
                 </section>
 
                 <section id="menu" className={classes.menu}>
-                    <Button className={classes.menuButtons} color="primary" onClick={ () => { scrollIntoView(jQuery('#page1')) } } > About me </Button>
-                    <Button className={classes.menuButtons} color="primary" onClick={ () => { scrollIntoView(jQuery('#page2')) } } > Projects </Button>
+                    <Button className={classes.menuButtons} color="primary" onClick={ () => { scrollIntoView(jQuery('#page1')) } } > Projects </Button>
+                    <Button className={classes.menuButtons} color="primary" onClick={ () => { scrollIntoView(jQuery('#page2')) } } > Hobbies </Button>
                     <Button className={classes.menuButtons} color="primary" onClick={ () => { scrollIntoView(jQuery('#page3')) } } > Contact me </Button>
                 </section>
 
-                <section id="page1" className={classes.page}>
+                <section id="page0" className={classes.page}>
                     <AboutMe />
                 </section>
-                <section id="page2" className={classes.page}>
+                <section id="page1" className={classes.page}>
                     <Projects />
+                </section>
+                <section id="page2" className={classes.page}>
+                    <Hobbies />
                 </section>
                 <section id="page3" className={classes.page}>
                     <ContactMe />
