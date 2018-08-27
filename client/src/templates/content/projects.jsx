@@ -32,10 +32,17 @@ const posts = [
             cSharp: 100
         },
         contentImg: 'https://img.itch.zone/aW1hZ2UvMjc0ODgzLzEzMzE0NTkucG5n/original/83Z9Lt.png',
-        content: `
-            So Yeah, me and a friend made another game..\n
-            but... this time it was different... \n
-        `,
+        content: [
+            {type: 'text', content: `
+                Me and a friend decided to take part in a challenging 48 hour GameJam. This was the first ever GameJam we did
+                together and will surely will not be the last. You're floating in space with boxes, a portal and some unwanted
+                white and black holes...
+            `},
+            {type: 'text', content: `
+                Your job is to jump from box to box but becareful, you only stick to the green ones. If you end up flying 
+                into the abliss, you have one shot before you run out of propellant! Use it well.
+            `},
+        ],
         github: 'https://github.com/MidgetJake/GDQ-One-Mechanic-Jam',
         itchIO: 'https://valesoft.itch.io/forced'
     }, {
@@ -49,10 +56,14 @@ const posts = [
             css: 4.1
         },
         contentImg: HASImg,
-        content: `
-            From turning off my lights when I am not in the room to protecting my not so secret stash of sweets...
-            If you're somehow thinking Jarvis... then you're correct! Tony Stark has indeed been my childhood hero
-        `,
+        content: [
+            {type: 'text', content: `
+                From turning off my lights when I am not in the room to protecting my not so secret stash of snacks...
+                If you're somehow thinking Jarvis... then you're correct! Tony Stark has indeed been my childhood hero and still
+                is to this day. Future plans with this project, is to give it access to my google calanders, so it'll have more
+                control to notify me.
+            `},
+        ],
         github: 'https://github.com/DoctorDib/HASv2'
     }, {
         id: 3,
@@ -62,14 +73,17 @@ const posts = [
             cSharp: 100
         },
         contentImg: 'https://jakebarter.co.uk/static/media/FrontImage.c290a403.png',
-        content: `
-            So... you're stuck on a space station which is on the verge of destruction. You've been programmed to protect the
-            precious cargo boxes with your AI life. The last act of kindness and selfless sacrifice you can do, is to gather as
-            much cargo as possible before being sucked into the deep a bliss.
-
-            Watch out for random explosions - you get around 5-10 seconds of warning then boom! Just make sure you're on the
-            right side of the door when sealing.
-        `,
+        content: [
+            {type: 'text', content: `
+                So... you're stuck on a space station which is on the verge of destruction. You've been programmed to protect the
+                precious cargo boxes with your AI life. The last act of kindness and selfless sacrifice you can do, is to gather as
+                much cargo as possible before being sucked into the deep a bliss.
+            `},
+            {type: 'text', content: `
+                Watch out for random explosions - you get around 5-10 seconds of warning then boom! Just make sure you're on the
+                right side of the door when sealing.
+            `},
+        ],
         github: 'https://github.com/MidgetJake/LD-Jam',
         itchIO: 'https://valesoft.itch.io/only-space'
     }, {
@@ -80,15 +94,18 @@ const posts = [
             cSharp: 95.75,
             html: 6.25
         },
-        contentImg: '',
-        content: `
-            So... you're stuck on a space station which is on the verge of destruction. You've been programmed to protect the
-            precious cargo boxes with your AI life. The last act of kindness and selfless sacrifice you can do, is to gather as
-            much cargo as possible before being sucked into the deep a bliss.
-
-            Watch out for random explosions - you get around 5-10 seconds of warning then boom! Just make sure you're on the
-            right side of the door when sealing.
-        `,
+        contentImg: 'https://blog.algolia.com/wp-content/uploads/2015/11/React_illo_final_720x400.png',
+        content: [
+            {type: 'text', content: `
+                So... you're stuck on a space station which is on the verge of destruction. You've been programmed to protect the
+                precious cargo boxes with your AI life. The last act of kindness and selfless sacrifice you can do, is to gather as
+                much cargo as possible before being sucked into the deep a bliss.
+            `},
+            {type: 'text', content: `
+                Watch out for random explosions - you get around 5-10 seconds of warning then boom! Just make sure you're on the
+                right side of the door when sealing.
+            `},
+        ],
         github: 'https://github.com/DoctorDib/Portfolio',
         otherLink: '/'
     }, {
@@ -98,10 +115,12 @@ const posts = [
         languages: {
             javaScript: 100
         },
-        contentImg: '',
-        content: `
-
-        `,
+        contentImg: 'https://i.ytimg.com/vi/ZboTgOajnGg/maxresdefault.jpg',
+        content: [
+            {type: 'text', content: `
+                A strategic and logical thinking programming game that shows your true skill with your selected programming language.
+            `},
+        ],
         github: 'https://github.com/DoctorDib/MyScreeps'
     }
 ];
@@ -129,7 +148,11 @@ class ProjectsCard extends React.Component {
                         <section className={classes.projectContent}>
                             {post.contentImg ? (<img className={classes.projectImg} src={post.contentImg}/>) : (<img className={classes.disabled}/>)}
 
-                            <Typography gutterBottom> {post.content} </Typography>
+                            {post.content.map(paragraph => (
+                                paragraph.type === "text" ?
+                                    <Typography gutterBottom> {paragraph.content} </Typography> :
+                                    <img src={paragraph.content} className={classes.hobbyContentConfig}/>
+                            ))}
                         </section>
 
                         <section className={classes.projectLinks}>

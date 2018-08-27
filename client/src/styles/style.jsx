@@ -5,7 +5,6 @@ const styles = theme => ({
         background: '#cbcbcb',
         margin: 0,
         color: '#f3f3f3',
-        //fontFamily: '"Montserrat Light", arial',
         fontWeight: 200,
         display: 'flex',
         flexDirection:  'column',
@@ -18,27 +17,36 @@ const styles = theme => ({
         textAlign: 'center',
         verticalAlign: 'baseline',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         paddingTop: '10%',
         paddingBottom: '10%',
-        width: '100%'
+        width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            height: '30vh',
+        }
     },
 
     name: {
         display: 'flex',
         flexDirection: 'column',
-        fontSize: '5em',
-        height: '2em',
+        fontSize: '6em',
         webkitUserSelect: 'none',
         mozUserSelect: 'none',
         msUserSelect: 'none',
-        userSelect: 'none'
+        userSelect: 'none',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '5em'
+        }
     },
 
     nameChild: {
-        fontSize: '0.35em',
-        textAlign: 'right'
+        fontSize: '2em',
+        textAlign: 'right',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1.25em'
+        }
     },
 
     menu: {
@@ -105,10 +113,13 @@ const styles = theme => ({
         color: 'black',
         borderBottom: 'solid #222222 0.1em',
         margin: '0',
-        padding: '2em',
+        paddingBottom: '2em',
         width: '100%',
         backgroundColor: '#eeeeee',
-        boxShadow: '0px 0px 6px 1px #b9b9b9'
+        boxShadow: '0px 0px 6px 1px #b9b9b9',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
     },
 
     menuButtons: {
@@ -116,7 +127,11 @@ const styles = theme => ({
         marginLeft: '4em',
         marginRight: '4em',
         height: '80%',
-        width: '10%'
+        width: '10%',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '1em',
+            marginRight: '1em'
+        }
     }
 
 });

@@ -27,10 +27,12 @@ const styles = theme => ({
         flex: '0 0 45%',
         maxWidth: '75vw',
         [theme.breakpoints.down('sm')]: {
-              flex: '0 0 100%',
-              margin: '0',
-              marginTop: '2em',
-              marginBottom: '2em'
+            flex: '0 0 100%',
+            margin: '0',
+            marginTop: '2em',
+            marginBottom: '2em',
+            minWidth: '95vw'
+
         }
     },
 
@@ -152,7 +154,10 @@ const styles = theme => ({
         width: '50%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginBottom: '2em'
+        marginBottom: '2em',
+        [theme.breakpoints.down('sm')]: {
+            minWidth: '95%',
+        }
     },
 
     homeCard: {
@@ -161,7 +166,10 @@ const styles = theme => ({
         width: '75vw',
         display: 'flex',
         justifyContent: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
+            minWidth: '95vw',
+        }
     },
 
     title: {
@@ -171,23 +179,58 @@ const styles = theme => ({
         flexDirection: 'column',
         color: '#2e2e35',
         marginTop: '0.2em',
-        marginBottom: '0.5em'
+        marginBottom: '0.5em',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '2em',
+            paddingTop: '0.5em'
+        }
     },
 
     disabled: {
         display: 'none'
     },
 
-    hobbyList: {
+    hobbyButtons: {
+
+    },
+
+    hobbyContentConfig: {
+        width: '80%',
+        marginTop: '2em',
+        marginBottom: '2em',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '95vw',
+            minWidth: '100%'
+        }
+    },
+
+    hobbyContainer: {
+        margin: '1em'
+    },
+
+    hobbyContainer2: {
+        margin: '1em',
+        maxWidth: '70vw',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '95vw',
+        }
+    },
+
+    hobbyList: {
     },
 
     hobbyCard: {
         padding: '0',
-        paddingBottom: '1em'
+        paddingBottom: '1em',
+        padding: '2em',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
 
     hobby: {
@@ -205,6 +248,14 @@ const styles = theme => ({
         }
     },
 
+    hobbyHeader: {
+        display: 'flex',
+        textAlign: 'center',
+        flexDirection: 'column',
+        paddingTop: '0.5em',
+        paddingBottom: '0.5em'
+    },
+
     hobbyTitle: {
         fontSize: '2em',
         color: '#898989',
@@ -212,6 +263,10 @@ const styles = theme => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: '0.1em'
+    },
+
+    hobbySubtitle: {
+        backgroundColor: '#e5e3e3'
     },
 
     hiddenContent: {

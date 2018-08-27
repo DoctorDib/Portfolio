@@ -46,11 +46,9 @@ class Template extends React.Component {
 
         return (
             <section className={classes.body}>
-
                 <section className={classes.header}>
-                    <div className={classes.name}>
-                        <Typography variant='display4' color="whiteText"> James Dibnah <Typography variant='display1' color="whiteText" className={classes.nameChild}> Software developer - ICTTech TMIET </Typography></Typography>
-                    </div>
+                    <Typography variant='display4' color="whiteText" className={classes.name}> James Dibnah </Typography>
+                    <Typography variant='display1' color="whiteText" className={classes.nameChild}> Software developer - ICTTech TMIET </Typography>
                 </section>
 
                 <section id="menu" className={classes.menu}>
