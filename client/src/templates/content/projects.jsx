@@ -97,13 +97,11 @@ const posts = [
         contentImg: 'https://blog.algolia.com/wp-content/uploads/2015/11/React_illo_final_720x400.png',
         content: [
             {type: 'text', content: `
-                So... you're stuck on a space station which is on the verge of destruction. You've been programmed to protect the
-                precious cargo boxes with your AI life. The last act of kindness and selfless sacrifice you can do, is to gather as
-                much cargo as possible before being sucked into the deep a bliss.
+                My Portfolio (the webpage that you're on right now (in case you didn't figure it out (also this bracket 
+                inception is start to get too deep))) helps show off all of my favourite and successful projects and hobbies.
             `},
             {type: 'text', content: `
-                Watch out for random explosions - you get around 5-10 seconds of warning then boom! Just make sure you're on the
-                right side of the door when sealing.
+                It will also help the viewer (yourself included) to give a real insight on my ability to program.
             `},
         ],
         github: 'https://github.com/DoctorDib/Portfolio',

@@ -7,6 +7,8 @@ import styles from '../../styles/contentStyle';
 import MotorbikeMain from '../../img/motorbiking/main.jpg';
 import MotorbikeMeetings from '../../img/motorbiking/meetings.jpg';
 import MotorbikeRiding from '../../img/motorbiking/riding.jpg';
+import MyBikes from '../../img/motorbiking/myBikes.jpg';
+import NewBike from '../../img/motorbiking/newBike.png';
 
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -66,6 +68,19 @@ const hobbies = [
                 Another reason why I love biking, is the community. No matter who you pass out on the road, they always 
                 give time to either nod or even wave hello. I also attend some meet ups, where we get to show off
                 our motorbikes and just socialise with the community.
+            `},
+            {type: 'img', content: MyBikes},
+            {type: 'text', content: `
+                I now have a total of two bikes, the first one I bought (the one of the left) is a Sinis Stealth 125. 
+                My very first bike I bought for myself cost me £500 to buy and £300 to insure, not too bad right? After
+                the comming months a year had past, and now sadly my bike started to get pretty tired.
+            `},
+            {type: 'img', content: NewBike},
+            {type: 'text', content: `
+                This is where my second bike comes into picture. I passed my A2 Mod 1 and Mod 2 tests and was ready to 
+                move onto a bigger and stronger bike. The bike I had my heart set on was a Suzuki GSR600S, and from days
+                of searching, I have found my bike. Costing me £1950 and over £600 of insurance, I believe in the long 
+                it'll be beneficial.
             `}
         ],
         otherLink: ''
