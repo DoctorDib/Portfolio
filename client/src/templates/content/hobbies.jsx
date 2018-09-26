@@ -45,6 +45,11 @@ const hobbies = [
         subtitle: 'A programmer inspired by Tony Stark',
         contentImg: '',
         content: [
+            {type: 'text', content: `
+                Puzzles and problem solving has always sparked my interest back when I was a kid, always trying to push
+                myself that onestep further in order to solve the hardest of riddles. This is where programming comes
+                into my life, figuring out problems in order to move onto th nex.
+            `},
         ],
         otherLink: 'https://github.com/DoctorDib'
     }, {

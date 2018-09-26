@@ -98,7 +98,7 @@ const posts = [
         content: [
             {type: 'text', content: `
                 My Portfolio (the webpage that you're on right now (in case you didn't figure it out (also this bracket 
-                inception is start to get too deep))) helps show off all of my favourite and successful projects and hobbies.
+                inception is starting to get too deep))) helps show off all of my favourite and successful projects and hobbies.
             `},
             {type: 'text', content: `
                 It will also help the viewer (yourself included) to give a real insight on my ability to program.
@@ -120,6 +120,20 @@ const posts = [
             `},
         ],
         github: 'https://github.com/DoctorDib/MyScreeps'
+    }, {
+        id: 6,
+        title: 'MusicDEV',
+        subtitle: 'Final Year Project - Music Recommendation',
+        languages: {
+            javaScript: 100
+        },
+        contentImg: '',
+        content: [
+            {type: 'text', content: `
+                Using Spotify's music API + data, I am able to recommend users music that they may possibly enjoy.
+            `},
+        ],
+        github: 'https://github.com/DoctorDib/MusicDEV'
     }
 ];
 
@@ -147,9 +161,12 @@ class ProjectsCard extends React.Component {
                             {post.contentImg ? (<img className={classes.projectImg} src={post.contentImg}/>) : (<img className={classes.disabled}/>)}
 
                             {post.content.map(paragraph => (
-                                paragraph.type === "text" ?
-                                    <Typography gutterBottom> {paragraph.content} </Typography> :
-                                    <img src={paragraph.content} className={classes.hobbyContentConfig}/>
+
+                                paragraph.type !== "text" ?
+                                    paragraph.type !== "image" ?
+                                        <Typography variant="title" gutterBottom> {paragraph.content} </Typography>
+                                        : <img src={paragraph.content} className={classes.hobbyContentConfig}/>
+                                    : <Typography gutterBottom> {paragraph.content} </Typography>
                             ))}
                         </section>
 
