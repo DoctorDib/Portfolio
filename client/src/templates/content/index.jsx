@@ -31,7 +31,11 @@ function scrollIntoView (target) {
             target.focus()
         }
     });
-}
+};
+
+function backTop() {
+    scrollIntoView(jQuery('.Template-header-2'));
+};
 
 class Template extends React.Component {
     state = { value: 0 };
@@ -69,6 +73,7 @@ class Template extends React.Component {
                 <section id="page3" className={classes.page}>
                     <ContactMe />
                 </section>
+                <p className={classes.backTop} onClick={backTop}> &#11165; </p>
             </section>
         );
     }

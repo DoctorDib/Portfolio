@@ -9,6 +9,7 @@ import MotorbikeMeetings from '../../img/motorbiking/meetings.jpg';
 import MotorbikeRiding from '../../img/motorbiking/riding.jpg';
 import MyBikes from '../../img/motorbiking/myBikes.jpg';
 import NewBike from '../../img/motorbiking/newBike.png';
+import BikeOnHill from '../../img/motorbiking/bikeOnHill.jpg';
 
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -65,7 +66,7 @@ const hobbies = [
             {type: 'img', content: MotorbikeRiding},
             {type: 'text', content: `
                 Motorbiking isn't just a way to travel from point A to point B for me, it is also a hobby. On a weekly basis
-                I take timeout of my weekend to go out on long and far rides with my friends, discovering new places and taking
+                I take time out of my weekend to go out on long and distant rides with my friends, discovering new places and taking
                 pictures where ever I can.
             `},
             {type: 'img', content: MotorbikeMeetings},
@@ -76,7 +77,7 @@ const hobbies = [
             `},
             {type: 'img', content: MyBikes},
             {type: 'text', content: `
-                I now have a total of two bikes, the first one I bought (the one of the left) is a Sinis Stealth 125. 
+                I now have a total of two bikes, the first one I bought (the one of the right in the image above) is a Sinis Stealth 125. 
                 My very first bike I bought for myself cost me £500 to buy and £300 to insure, not too bad right? After
                 the comming months a year had past, and now sadly my bike started to get pretty tired.
             `},
@@ -86,6 +87,11 @@ const hobbies = [
                 move onto a bigger and stronger bike. The bike I had my heart set on was a Suzuki GSR600S, and from days
                 of searching, I have found my bike. Costing me £1950 and over £600 of insurance, I believe in the long 
                 it'll be beneficial.
+            `},
+            {type: 'img', content: BikeOnHill},
+            {type: 'text', content: `
+                Why do I do it? I motorbike for the adventure and the freedom, not only I am not limited to the distance, 
+                but I am not limited by the traffic, going far and wide leaving a trail of dust behind.
             `}
         ],
         otherLink: ''

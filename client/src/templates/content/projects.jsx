@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import styles from '../../styles/contentStyle';
 import HASImg from '../../img/HAS.png';
+import MusicDEVImg from '../../img/MusicDEV.jpeg';
 
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -88,24 +89,30 @@ const posts = [
         itchIO: 'https://valesoft.itch.io/only-space'
     }, {
         id: 4,
-        title: 'PORTFOLIO',
-        subtitle: 'Information about me - What you see now!',
+        title: 'MusicDEV',
+        subtitle: 'University F.Y.P - Music Recommendation and Continuation',
         languages: {
-            cSharp: 95.75,
-            html: 6.25
+            javaScript: 100
         },
-        contentImg: 'https://blog.algolia.com/wp-content/uploads/2015/11/React_illo_final_720x400.png',
+        contentImg: MusicDEVImg,
         content: [
             {type: 'text', content: `
-                My Portfolio (the webpage that you're on right now (in case you didn't figure it out (also this bracket 
-                inception is starting to get too deep))) helps show off all of my favourite and successful projects and hobbies.
+                MusicDEV allows the user to find new music based on an activity / mood / genre that they select. When
+                they have linked their account, MusicDEV will learn from the users spotify profile all of the music that
+                they have listened to and will base the right music. MusicDEV also has a feature that allows the user,
+                to automatically add the song to a playlist so they can have a continous stream of recommeded music.
             `},
             {type: 'text', content: `
-                It will also help the viewer (yourself included) to give a real insight on my ability to program.
+                So what does it do?
+            `},
+            {type: 'text', content: `
+                MusicDEV is a current (working in progress) project that assists the user in finding new and enjoyable 
+                music. The platform uses various of node libraries along with using react to help give the user a full 
+                efficient experience, as well as using Google Material UI for nice usability and looks!
             `},
         ],
-        github: 'https://github.com/DoctorDib/Portfolio',
-        otherLink: '/'
+        github: 'https://github.com/DoctorDib/MusicDEV',
+        otherLink: 'fyp.jamesdibnah.co.uk'
     }, {
         id: 5,
         title: 'SCREEPS',
@@ -120,20 +127,6 @@ const posts = [
             `},
         ],
         github: 'https://github.com/DoctorDib/MyScreeps'
-    }, {
-        id: 6,
-        title: 'MusicDEV',
-        subtitle: 'Final Year Project - Music Recommendation',
-        languages: {
-            javaScript: 100
-        },
-        contentImg: '',
-        content: [
-            {type: 'text', content: `
-                Using Spotify's music API + data, I am able to recommend users music that they may possibly enjoy.
-            `},
-        ],
-        github: 'https://github.com/DoctorDib/MusicDEV'
     }
 ];
 

@@ -132,6 +132,24 @@ const styles = theme => ({
             marginLeft: '1em',
             marginRight: '1em'
         }
+    },
+
+    backTop: {
+        fontSize: '3em',
+        position: 'fixed',
+        zIndex: '66',
+        bottom: '0',
+        right: '10',
+        color: 'black',
+        cursor: 'pointer',
+        borderRadius: '100em',
+        width: '50px',
+        height: '50px',
+        border: '3px solid black',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white'
     }
 
 });
